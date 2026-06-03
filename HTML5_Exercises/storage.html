@@ -1,0 +1,37 @@
+<select id="eventType">
+<option>Music</option>
+<option>Sports</option>
+<option>Workshop</option>
+</select>
+
+<button onclick="savePref()">
+Save Preference
+</button>
+
+<button onclick="clearPref()">
+Clear Preference
+</button>
+
+<script>
+
+window.onload=function()
+{
+document.getElementById("eventType").value=
+localStorage.getItem("event");
+}
+
+function savePref()
+{
+localStorage.setItem(
+"event",
+document.getElementById("eventType").value
+);
+}
+
+function clearPref()
+{
+localStorage.clear();
+sessionStorage.clear();
+}
+
+</script>
