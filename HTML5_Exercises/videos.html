@@ -1,0 +1,25 @@
+<video width="400"
+controls
+oncanplay="ready()">
+
+<source src="video.mp4"
+type="video/mp4">
+
+</video>
+
+<p id="msg"></p>
+
+<script>
+
+function ready()
+{
+document.getElementById("msg").innerHTML =
+"Video ready to play";
+}
+
+window.onbeforeunload=function()
+{
+return "Are you sure?";
+}
+
+</script>
